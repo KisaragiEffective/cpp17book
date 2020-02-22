@@ -842,7 +842,7 @@ int main()
 }
 ~~~
 
-現在`recursive_directory_iterator`が指しているファイルパスがディレクトリーである場合、そのイテレーターをインクリメントすると、そのディレクトリー下を再帰的に列挙することになる。しかし、`recursion_pending()`が`false`を返す場合、ディレクトリーの最適的な列挙はスキップされる。インクリメント操作が行われた後は`recursion_pending()`の結果は`true`に戻る。
+現在`recursive_directory_iterator`が指しているファイルパスがディレクトリーである場合、そのイテレーターをインクリメントすると、そのディレクトリー下を再帰的に列挙することになる。しかし、`recursion_pending()`が`false`を返す場合、ディレクトリーの再帰的な列挙はスキップされる。インクリメント操作が行われた後は`recursion_pending()`の結果は`true`に戻る。
 
 つまり、`disable_recursion_pending`は、現在指しているディレクトリー下を再帰的に列挙することをスキップする機能を提供する。
 
